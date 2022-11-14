@@ -12,8 +12,8 @@
 )
 
 (deffunction positiveOrNegative (?question)
-	(bind ?response (ProposeQuestion ?question positive negative p n))
-	(if (or (eq ?response positive) (eq ?response p))
+	(bind ?response (ProposeQuestion ?question positive negative p n pos neg))
+	(if (or (eq ?response positive) (eq ?response p) (eq ?response pos))
 		then positive
 		else negative)
 )
